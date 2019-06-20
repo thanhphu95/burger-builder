@@ -1,6 +1,6 @@
-import React from "react";
-import "./Burger.css";
-import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
+import React from 'react';
+import classess from './Burger.css';
+import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const buger = props => {
   let transformedIngredients = Object.keys(props.ingredients)
@@ -16,7 +16,7 @@ const buger = props => {
   transformedIngredients =
     transformedIngredients.length > 0 ? transformedIngredients : addIngredients;
   return (
-    <div className="Burger">
+    <div className={classess.Burger}>
       <BurgerIngredient type="bread-top" />
       {transformedIngredients}
       <BurgerIngredient type="bread-bottom" />
